@@ -1,6 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 {
     "contract":"Straight Bill of Lading - Short Form",
     "version":1.1,
@@ -96,7 +99,7 @@ Hash: SHA1
         "art_12":"This JavaScript Object Notation (JSON) representation supersedes any prior rules, electrionic logic, code, programmes, or software related to the subject matter of the bill of lading."
     }
 }
------BEGIN PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
 iQEcBAEBAgAGBQJZOaG0AAoJEOR6RtIV8LIFqSIIAIKI7L/DKEvshQOYIPpz5N1A
@@ -106,4 +109,15 @@ ECUMhIfZmJ9c1vbNLvS0uZjFzY1N+BzgH2WLC/zSPff8Syc6SwxPS88GNeHiIB2v
 6FqCFEBz+a60yIshSIOY0wkZofFq/ZST2RlFPhY/7VFcnLOSalPVb+Fzd1u56klw
 jJNiBSRh6KYAUc/umrmAHh/4uKGFkl242G9vbZzR/Sma10qOassTP6dgJBcxH40=
 =++ar
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJZOceOAAoJELktxykYWuQ3t6IH/2P59FF5StVRTViA0p8EDR//
+UK5lgLjPnob3TPT9JamBEKy0+DttX9FsJdo90eTce3RHWy8mHDV5kbOZmFdOmpJf
+5g6rFWsFiFJJ8+6DB340SNxY0NL61D8iiNO/RGxc5gemEH+55RpaNl4H5xQ4YpEe
+LKbU6feL+Crm0y/PNYYFD689n4Ck/vBdQ3fvwG0AAADE+CYnIg0My8ijena++5iK
+bad4V8gSADrgcFCzUUC/n0pRpjRf4tU4cRJtu5/0ZBWh/jM6KbcHlIx0nlstnjDy
+vt4myQU5RKvjcFXtzH1EVt8TXcSKYAIf1K7mtIqjG1cCZhIOPsnfwfREz+eiCYk=
+=Ok+c
 -----END PGP SIGNATURE-----
