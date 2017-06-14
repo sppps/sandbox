@@ -1,0 +1,16 @@
+{
+    "award":"2",
+    "pid":"344763476a3b19a5e5679ddbce37a7bd8391dbbe2daa380ec0d2f6fb9b68e0ba",
+    "tx_hash":"5b9882db20b6eac98001538d3e95129825764008920bd8b4d0b0ac2ef60407c9",
+    "claimant":{
+        "party":"0",
+        "xmr":"9vbZMfxtakBjZuGCY7icMcAxQ416VGLT9dVwpnm3gS8VC6dXiq4Z5SSQGEcrc3fmFdfC7ZNtP3ckYcLRTEKBU9cGKknreic",
+        "pgp":"EEF9 2264 44F5 39C3 9D73 C376 E47A 46D2 15F0 B205"
+    },
+    "respondent":{
+        "party":"1",
+        "xmr":"9ywXnWZhwdgR3U1QPZE9mAgpWm5TJ6qBt2nUqQQcJfrXTF27Y1eg5NS8eefmUj7abpAqaGvZsyrT3Z8i5vxWpXtEQ49r2DF",
+        "pgp":"1D59 4E72 1F14 F437 20D2 3BDA 4881 DEB8 7665 324C"
+    },
+    "decision":"After reviewing redacted communications between the parties before the contract was signed, the tribunal finds the parties did not have a meeting of the minds. Therefore, the bids are refunded equally to both parties."
+}

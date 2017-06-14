@@ -1,0 +1,28 @@
+{
+    "contract":"Weather Betting Contract",
+    "version":1.1,
+    "bet":{
+        "city":"Paris",
+        "country":"France",
+        "open_date":"2017-05-01T00:00:00.000Z",
+        "close_date":"2017-06-13T00:00:00.000Z",
+        "source":"http://api.openweathermap.org"
+    },
+    "result":"27",
+    "claimant":{
+        "party":"0",
+        "xmr":"9vbZMfxtakBjZuGCY7icMcAxQ416VGLT9dVwpnm3gS8VC6dXiq4Z5SSQGEcrc3fmFdfC7ZNtP3ckYcLRTEKBU9cGKknreic",
+        "pgp":"EEF9 2264 44F5 39C3 9D73 C376 E47A 46D2 15F0 B205",
+        "high_temperature_bid":"35",
+        "wager":"1",
+        "claim":"There was a mistake in the name of the city entered into the contract. I meant Paris, Texas, not Paris, France."
+    },
+    "respondent":{
+        "party":"1",
+        "xmr":"9ywXnWZhwdgR3U1QPZE9mAgpWm5TJ6qBt2nUqQQcJfrXTF27Y1eg5NS8eefmUj7abpAqaGvZsyrT3Z8i5vxWpXtEQ49r2DF",
+        "pgp":"1D59 4E72 1F14 F437 20D2 3BDA 4881 DEB8 7665 324C",
+        "high_temperature_bid":"28",
+        "wager":"1",
+        "answer":"The contract clearly stated France before it was accepted. There was no mistake."
+    }
+}
