@@ -83,7 +83,8 @@ contract Sales {
         seller.transfer(this.balance);
     }
 
-    /// Buyer submits deposit to accept Seller's offer, which lock funds until Seller's performance. Buyer's deposit is twice the value of the goods.    function acceptOffer()
+    /// Buyer submits deposit to accept Seller's offer, which lock funds until Seller's performance. Buyer's deposit is twice the value of the goods.
+    function acceptOffer()
     function accept()        
         inState(State.Created)
         condition(msg.value == (2 * value))
@@ -94,7 +95,8 @@ contract Sales {
         state = State.Locked;
     }
 
-    /// Buyer's confirmation of delivery and release of funds. Seller receives price of goods and deposit. Buyer receives deposit.    function confirmDelivery()
+    /// Buyer's confirmation of delivery and release of funds. Seller receives price of goods and deposit. Buyer receives deposit.
+    function confirmDelivery()
     function delivered()
         onlyBuyer
         inState(State.Locked)
