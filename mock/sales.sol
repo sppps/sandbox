@@ -118,7 +118,7 @@ contract Sales {
     }
     
     function resolve()
-        onlyArbitrator;
+        onlyArbitrator
         inState(State.Locked)
     {        
         Resolved();
@@ -129,7 +129,7 @@ contract Sales {
     }
     
     function terminate()
-        onlyArbitrator;
+        onlyArbitrator
         inState(State.Locked)
     {          
         Terminated();
