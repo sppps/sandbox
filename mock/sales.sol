@@ -9,8 +9,7 @@ The parties agree as follows:
 
 2 Deposit. Each party shall transmit funds to <enter smart contract address>  in the amount of the price of the goods and a security deposit that is equal to the value of the goods. The Seller may cancel this agreement before a deposit is made by the Buyer, receive paid in funds back. Once a deposit by the Buyer is made, the funds shall be locked in the smart contract’s wallet.
 
-3. Delivery; Title; and Risk of Loss. The Seller shall deliver the goods under Incoterms
- 2010 <enter delivery term>.
+3. Delivery; Title; and Risk of Loss. The Seller shall deliver the goods under Incoterms 2010 <enter delivery term>.
 
 4. Payment. Upon delivery of the goods, the Buyer shall execute the confirmReceived() function to release the locked funds from the smart contract’s wallet. The Seller shall receive the price of the goods and Seller’s portion of the security deposit. The Buyer shall receive the Buyer’s portion of the security deposit.
 
