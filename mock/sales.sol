@@ -25,10 +25,9 @@ The parties agree as follows:
 
 10. Electronic Signatures. This agreement is signed electronically by the parties and recorded on <enter blockchain and transaction hash>.
 */
-
 pragma solidity ^0.4.11;
 
-contract Purchase {
+contract Sales {
     uint public value;
     address public seller;
     address public buyer;
@@ -67,80 +66,75 @@ contract Purchase {
         _;
     }
 
-    event Aborted();
-    event PurchaseConfirmed();
-    event ItemReceived();
-    event Dispute();
+    event Revoked();
+    event Accepted();
+    event GoodsReceived();
+    event Disputed();
+    event Resolved();
+    event Terminated();
 
-    /// Abort the purchase and reclaim the ether.
-    /// Can only be called by the seller before
-    /// the contract is locked.
-    function abort()
+    /// Seller can revoke the offer and recover deposit before Buyer's acceptance.
+    function revoke()
         onlySeller
         inState(State.Created)
     {
-        Aborted();
+        Revoked();
         state = State.Inactive;
         seller.transfer(this.balance);
     }
 
-    /// Confirm the purchase as buyer.
-    /// Transaction has to include `2 * value` ether.
-    /// The ether will be locked until confirmReceived
-    /// is called.
-    function confirmPurchase()
+    /// Buyer submits deposit to accept Seller's offer, which lock funds until Seller's performance. Buyer's deposit is twice the value of the goods.    function acceptOffer()
+    function accept()        
         inState(State.Created)
         condition(msg.value == (2 * value))
         payable
     {
-        PurchaseConfirmed();
+        Accepted();
         buyer = msg.sender;
         state = State.Locked;
     }
 
-    /// Confirm that you (the buyer) received the item.
-    /// This will release the locked ether.
-    function confirmReceived()
+    /// Buyer's confirmation of delivery and release of funds. Seller receives price of goods and deposit. Buyer receives deposit.    function confirmDelivery()
+    function delivered()
         onlyBuyer
         inState(State.Locked)
     {
-        ItemReceived();
-        // It is important to change the state first because
-        // otherwise, the contracts called using `send` below
-        // can call in again here.
+        GoodsReceived();
         state = State.Inactive;
-
-        // NOTE: This actually allows both the buyer and the seller to
-        // block the refund - the withdraw pattern should be used.
-
         buyer.transfer(value);
         seller.transfer(this.balance);
     }
 
     /// Dispute resolution.
     function dispute()
-    inState(State.Locked)
-    condition(msg.value == (1))
-      
-    function confirmTX()
-         onlyArbitrator
-         inState(State.Locked)
+        inState(State.Locked)
+        condition(msg.value == (1))
+        payable
     {
-         ContractPerformed();
-         state = State.Inactive;
-         buyer.transfer(value - 0.5);
-         seller.transfer((value * 2) - 0.5);
-         arbitrator.transfer(this.balance);
+        Disputed();
+        state = State.Locked;
     }
-      
-    function abortTX()
-         onlyArbitrator
-         inState(State.Locked)
-    {
-         AbortContract();
-         state = State.Inactive;
-         buyer.transfer((value * 2) - 0.5);
-         seller.transfer((value * 2) - 0.5);
-         arbitrator.transfer(this.balance);
-    }     
+    
+    function resolve()
+        onlyArbitrator;
+        inState(State.Locked)
+    {        
+        Resolved();
+        state = State.Inactive;
+        buyer.transfer(value - 0.5);
+        seller.transfer((value * 2) - 0.5);
+        arbitrator.transfer(this.balance);
+    }
+    
+    function terminate()
+        onlyArbitrator;
+        inState(State.Locked)
+    {          
+        Terminated();
+        state = State.Inactive;
+        buyer.transfer((value * 2) - 0.5);
+        seller.transfer((value * 2) - 0.5);
+        arbitrator.transfer(this.balance);
+    }
+        
 }
