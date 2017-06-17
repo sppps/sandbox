@@ -11,7 +11,7 @@ The parties agree as follows:
 
 3. Delivery; Title; and Risk of Loss. The Seller shall deliver the goods under Incoterms 2010 <enter delivery term>.
 
-4. Payment. Upon delivery of the goods, the Buyer shall execute the confirmReceived() function to release the locked funds from the contract’s wallet. The Seller shall receive the price of the goods and Seller’s portion of the security deposit. The Buyer shall receive the Buyer’s portion of the security deposit.
+4. Payment. Upon delivery of the goods, the Buyer shall execute the function to release the locked funds from the contract’s wallet. The Seller shall receive the price of the goods and Seller’s portion of the security deposit. The Buyer shall receive the Buyer’s portion of the security deposit.
 
 5. Limitation of Liability. The Seller shall not be liable for any indirect, special, consequential, or punitive damages (including lost profits) arising out of or relating to this agreement, whether for breach of contract, tort, negligence, or any other form of action. In no event shall the Seller’s liability exceed the price the Buyer paid for the specific goods provided by the Seller giving rise to the claim or cause of action.
 
@@ -21,10 +21,11 @@ The parties agree as follows:
 
 8. Governing Law. The governing law for the agreement shall be the UNIDROIT Principles (2010) and, with respect to issues not covered by such Principles, by generally accepted principles of international commercial law.
 
-9. Dispute Resolution. Any dispute arising out of or in connection with this agreement shall be referred to and finally resolved by arbitration under the latest version of the Arbitracio Rules found at https://github.com/alvinjoelsantos/arbitracio, which Rules are deemed to be incorporated by reference. The parties agree that the arbitration shall be conducted with the use of electronic documents only and that the arbitral tribunal may limit the number, length, and scope of written submissions and written witness evidence. The arbitral tribunal may directly enforce any award by executing the confirmTX() and abortTX() functions from the arbitrator’s wallet (“enter address public arbitrator”) to release funds to the respective parties in accordance with such award. To initiate the arbitration process either party may submit 1 ether to the contract’s wallet, which will lock the funds until the dispute is resolved. The arbitration fee is set to 1 ether and shall be equally shared between the Seller and Buyer. On distribution of funds, the arbitrator may deduct the arbitration fee from the security deposit.
+9. Dispute Resolution. Any dispute arising out of or in connection with this agreement shall be referred to and finally resolved by arbitration under the latest version of the Arbitracio Rules found at https://github.com/alvinjoelsantos/arbitracio, which Rules are deemed to be incorporated by reference. The parties agree that the arbitration shall be conducted with the use of electronic documents only and that the arbitral tribunal may limit the number, length, and scope of written submissions and written witness evidence. The arbitral tribunal may directly enforce any award by executing functions from the arbitrator’s wallet (“enter address public arbitrator”) to release funds to the respective parties in accordance with such award. To initiate the arbitration process either party may submit 2 ether to the contract’s wallet, which will lock the funds until the dispute is resolved. The arbitration fee is set to 2 ether and shall be equally split between the Seller and Buyer. On distribution of funds, the arbitrator may deduct the arbitration fee from the security deposit.
 
 10. Electronic Signatures. This agreement is signed electronically by the parties and recorded on <enter blockchain and transaction hash>.
 */
+
 pragma solidity ^0.4.11;
 
 contract Sales {
