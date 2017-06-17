@@ -110,7 +110,7 @@ contract Sales {
     /// Dispute resolution.
     function dispute()
         inState(State.Locked)
-        condition(msg.value == (1))
+        condition(msg.value == (2))
         payable
     {
         Disputed();
@@ -123,8 +123,8 @@ contract Sales {
     {        
         Resolved();
         state = State.Inactive;
-        buyer.transfer(value - 0.5);
-        seller.transfer((value * 2) - 0.5);
+        buyer.transfer(value - 1);
+        seller.transfer((value * 2) - 1);
         arbitrator.transfer(this.balance);
     }
     
@@ -134,8 +134,8 @@ contract Sales {
     {          
         Terminated();
         state = State.Inactive;
-        buyer.transfer((value * 2) - 0.5);
-        seller.transfer((value * 2) - 0.5);
+        buyer.transfer((value * 2) - 1);
+        seller.transfer((value * 2) - 1);
         arbitrator.transfer(this.balance);
     }
         
