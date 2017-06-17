@@ -24,7 +24,6 @@ The parties agree as follows:
 9. Dispute Resolution. Any dispute arising out of or in connection with this agreement shall be referred to and finally resolved by arbitration under the latest version of the Arbitracio Rules found at https://github.com/alvinjoelsantos/arbitracio, which Rules are deemed to be incorporated by reference. The parties agree that the arbitration shall be conducted with the use of electronic documents only and that the arbitral tribunal may limit the number, length, and scope of written submissions and written witness evidence. The arbitral tribunal may directly enforce any award by executing the confirmTX() and abortTX() functions from the arbitrator’s wallet (“enter address public arbitrator”) to release funds to the respective parties in accordance with such award. To initiate the arbitration process either party may submit 1 ether to the contract’s wallet, which will lock the funds until the dispute is resolved. The arbitration fee is set to 1 ether and shall be equally shared between the Seller and Buyer. On distribution of funds, the arbitrator may deduct the arbitration fee from the security deposit.
 
 10. Electronic Signatures. This agreement is signed electronically by the parties and recorded on <enter blockchain and transaction hash>.
-
 */
 
 pragma solidity ^0.4.11;
