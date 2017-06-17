@@ -29,6 +29,11 @@ contract Purchase {
         _;
     }
 
+    modifier onlyArbitrator() {
+        require(msg.sender == arbitrator);
+        _;
+    }
+
     modifier inState(State _state) {
         require(state == _state);
         _;
@@ -84,8 +89,30 @@ contract Purchase {
         seller.transfer(this.balance);
     }
 
-      /// Dispute resolution.
-      function dispute()
-      inState(State.Locked);
-      condition(msg.value == (1))
+    /// Dispute resolution.
+    function dispute()
+    inState(State.Locked)
+    condition(msg.value == (1))
+      
+    function confirmTX()
+         onlyArbitrator
+         inState(State.Locked)
+    {
+         ContractPerformed();
+         state = State.Inactive;
+         buyer.transfer(value - 0.5);
+         seller.transfer((value * 2) - 0.5);
+         arbitrator.transfer(this.balance);
+    }
+      
+    function abortTX()
+         onlyArbitrator
+         inState(State.Locked)
+    {
+         AbortContract();
+         state = State.Inactive;
+         buyer.transfer((value * 2) - 0.5);
+         seller.transfer((value * 2) - 0.5);
+         arbitrator.transfer(this.balance);
+    }     
 }
