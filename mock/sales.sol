@@ -7,7 +7,7 @@ The parties agree as follows:
 
 1. Sale of Goods. The Seller shall sell to the Buyer and the Buyer shall purchase from the Seller the goods in the quantities and at the prices as set forth in IPFS: <enter hash>.
 
-2 Deposit. Each party shall transmit funds to <enter smart contract address>  in the amount of the price of the goods and a security deposit that is equal to the value of the goods. The Seller may cancel this agreement before a deposit is made by the Buyer, receive paid in funds back. Once a deposit by the Buyer is made, the funds shall be locked in the smart contract’s wallet.
+2. Deposit. Each party shall transmit funds to <enter smart contract address>  in the amount of the price of the goods and a security deposit that is equal to the value of the goods. The Seller may cancel this agreement before a deposit is made by the Buyer, receive paid in funds back. Once a deposit by the Buyer is made, the funds shall be locked in the smart contract’s wallet.
 
 3. Delivery; Title; and Risk of Loss. The Seller shall deliver the goods under Incoterms 2010 <enter delivery term>.
 
