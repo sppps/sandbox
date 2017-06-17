@@ -25,7 +25,8 @@ The parties agree as follows:
 
 10. Electronic Signatures. This agreement is signed electronically by the parties and recorded on <enter blockchain and transaction hash>.
 
-/*
+*/
+
 pragma solidity ^0.4.11;
 
 contract Purchase {
