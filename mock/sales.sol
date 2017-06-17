@@ -1,3 +1,32 @@
+/*
+INTERNATIONAL SALE OF GOODS SMART CONTRACT
+
+This agreement for the sale of goods is entered between the Seller (“<enter address public seller>”) and Buyer (“<enter address public buyer>”).
+
+The parties agree as follows:
+
+1. Sale of Goods. The Seller shall sell to the Buyer and the Buyer shall purchase from the Seller the goods in the quantities and at the prices as set forth in IPFS: <enter hash>.
+
+2 Deposit. Each party shall transmit funds to <enter smart contract address>  in the amount of the price of the goods and a security deposit that is equal to the value of the goods. The Seller may cancel this agreement before a deposit is made by the Buyer, receive paid in funds back. Once a deposit by the Buyer is made, the funds shall be locked in the smart contract’s wallet.
+
+3. Delivery; Title; and Risk of Loss. The Seller shall deliver the goods under Incoterms
+ 2010 <enter delivery term>.
+
+4. Payment. Upon delivery of the goods, the Buyer shall execute the confirmReceived() function to release the locked funds from the smart contract’s wallet. The Seller shall receive the price of the goods and Seller’s portion of the security deposit. The Buyer shall receive the Buyer’s portion of the security deposit.
+
+5. Limitation of Liability. The Seller will not be liable for any indirect, special, consequential, or punitive damages (including lost profits) arising out of or relating to this agreement, whether for breach of contract, tort, negligence, or other form of action. In no event will the Seller’s liability exceed the price the Buyer paid to the Seller for the specific goods provided by the Seller giving rise to the claim or cause of action.
+
+6. Force Majeure. The Seller will not be liable for delays in performance or for non-performance due to unforeseen circumstances or causes beyond the Seller’s reasonable control.
+
+7. Plain Text. This plain text version of the agreement supersedes any other rules, electronic logic, code, programs, or software representations of the terms and conditions found herein.
+
+8. Governing Law. The governing law for the agreement shall be the UNIDROIT Principles (2010) and, with respect to issues not covered by such Principles, by generally accepted principles of international commercial law.
+
+9. Dispute Resolution. Any dispute arising out of or in connection with this agreement shall be referred to and finally resolved by arbitration under the latest version of the Arbitracio Rules found at https://github.com/alvinjoelsantos/arbitracio, which Rules are deemed to be incorporated by reference. The parties agree that the arbitration shall be conducted with the use of electronic documents only and that the arbitral tribunal may limit the number, length, and scope of written submissions and written witness evidence. The tribunal may directly enforce any award by executing the dispute() function from the arbitrator’s wallet (“enter address public arbitrator”) to release funds to the respective parties in accordance with such award. To initiate the arbitration process either party may submit 1 ether to the smart contract’s wallet, which will lock the funds until the dispute is resolved. The arbitration fee is set to 1 ether and shall be paid equally between by the arbitrator on the distribution of funds to parties in accordance with the award.
+
+10. Electronic Signatures. This agreement is signed electronically by the parties and recorded on <enter blockchain and transaction hash>.
+
+/*
 pragma solidity ^0.4.11;
 
 contract Purchase {
