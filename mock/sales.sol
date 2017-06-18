@@ -30,6 +30,7 @@ pragma solidity ^0.4.11;
 
 contract Sales {
     uint public value;
+    bytes32 public pid = 4b57c7141cf17c97f76ab9c5f6bdbfb3a5e92078fb8657a594581a9977c50b92;
     address public seller;
     address public buyer;
     address public arbitrator;
