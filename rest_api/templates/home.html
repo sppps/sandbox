@@ -41,7 +41,8 @@
     <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
     <script>
         $(document).ready(function(){
-            $('form button').on('click', function(){
+            $('form').on('submit', function(event){
+                event.preventDefault();
                 var endpoint = $('#input__endpoint').val();
                 $.ajax({
                     url: $('#input__endpoint').val(),
