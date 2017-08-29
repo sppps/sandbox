@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>REST API PlayGround</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pure/base-min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pure/grids-core-min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pure/forms-min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pure/buttons-core-min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pure/buttons-min.css') }}">
+    <style>
+        .container {
+            padding: 2em;
+        }
+        label {
+            display: block;
+            padding-top: 0.5em;
+        }
+        button {
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <form class="pure-form">
+            <fieldset>
+                <legend>REST API PlayGround</legend>
+                <label for="input__endpoint">Endpoint:</label>
+                <input id="input__endpoint" value="/api/ipfspid/" style="width:50%;"/>
+                <br/>
+                <button type="button" class="pure-button pure-button-primary">Send request</button>
+                <label for="textarea__response">Response:</label>
+                <textarea id="textarea__response" style="height:10em; width:50%;"></textarea>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $('form button').on('click', function(){
+                var endpoint = $('#input__endpoint').val();
+                $.ajax({
+                    url: $('#input__endpoint').val(),
+                    dataType: 'text',
+                    success: function(text) {
+                        $('#textarea__response').val(text);
+                    },
+                    error: function(xhr, status, error) {
+                        $('#textarea__response').val('Status: ' + status + '\nMessage: ' + error);
+                    },
+                });
+            });
+        });
+    </script>
+</body>
+</html>
