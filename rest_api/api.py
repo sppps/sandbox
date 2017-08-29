@@ -26,6 +26,8 @@ def create_blueprint():
             dec_hex = binascii.unhexlify(plain_hex)
         else:
             dec_hex = binascii.unhexlify(x)
+        while dec_hex[0] == 0:
+            dec_hex = dec_hex[1:]
         return jsonify({
             'msg': dec_hex.decode("utf-8")
             })
